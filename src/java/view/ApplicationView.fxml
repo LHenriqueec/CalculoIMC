@@ -2,7 +2,7 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400" prefWidth="400">
+	
 </AnchorPane>
 
