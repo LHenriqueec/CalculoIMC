@@ -9,23 +9,23 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="480"
-	prefWidth="500">
+<AnchorPane fx:controller="controller.ApplicationController" xmlns:fx="http://javafx.com/fxml/1"
+	prefHeight="480" prefWidth="500">
 	<GridPane vgap="30" hgap="30" layoutX="30" layoutY="50"
 		alignment="CENTER">
 		<Label text="Sua Altura:" GridPane.columnIndex="0"
 			GridPane.rowIndex="0" />
-		<TextField GridPane.columnIndex="1" GridPane.rowIndex="0" />
+		<TextField fx:id="txtAltura" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
 		<Label text="Seu Peso:" GridPane.columnIndex="0"
 			GridPane.rowIndex="1" />
-		<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+		<TextField fx:id="txtPeso" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 	</GridPane>
 
 	<VBox layoutX="320" layoutY="20" spacing="20">
-		<Button text="Calcular IMC" prefWidth="150" prefHeight="40" />
-		<Button text="Limpar" prefWidth="150" prefHeight="40" />
-		<Button text="Fechar Programa" prefWidth="150" prefHeight="40" />
+		<Button text="Calcular IMC" prefWidth="150" prefHeight="40" onAction="#handleCalc" />
+		<Button text="Limpar" prefWidth="150" prefHeight="40" onAction="#handleClear" />
+		<Button text="Fechar Programa" prefWidth="150" prefHeight="40" onAction="#handleClose" />
 	</VBox>
 
 	<Separator prefWidth="460" layoutX="20" layoutY="220" />
@@ -33,16 +33,16 @@
 	<Label text="RESULTADO DO IMC" layoutX="30" layoutY="240" />
 
 	<Label text="SEU IMC:" layoutX="50" layoutY="280" />
-	
-	<Label text="PESO" layoutX="195" layoutY="330" />
-	<Label text="INFORMAÇÃO" layoutX="195" layoutY="420" />
-	
+
+	<Label fx:id="lblImc" text="PESO" layoutX="195" layoutY="330" />
+	<Label fx:id="lblStatus" text="INFORMAÇÃO" layoutX="195" layoutY="420" />
+
 	<VBox layoutX="50" layoutY="300" spacing="20">
 		<Rectangle fill="TRANSPARENT" stroke="BLACK" height="70"
 			width="360" />
 
 		<Rectangle fill="TRANSPARENT" stroke="BLACK" height="70"
-			width="360"/>
+			width="360" />
 	</VBox>
 </AnchorPane>
 
